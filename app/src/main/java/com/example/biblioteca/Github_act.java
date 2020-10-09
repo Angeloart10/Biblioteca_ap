@@ -2,6 +2,7 @@ package com.example.biblioteca;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -23,7 +24,7 @@ public class Github_act extends AppCompatActivity {
         setContentView(R.layout.activity_github_act);
 
         spinner2 = (Spinner) findViewById(R.id.spinner2);
-        String[] libros = {"Seleccione Libros", "Farenheith", "Revival", "El Alquimista"};
+        String[] libros = {"Seleccione Libros", "Farenheith", "Revival", "El Alquimista", "El Poder", "Despertar"};
         ArrayAdapter<String> adapt = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, libros);
         spinner2.setAdapter(adapt);
 
@@ -40,18 +41,31 @@ public class Github_act extends AppCompatActivity {
 
         if(spinner2.getSelectedItem().toString().equals("Farenheith"))
         {
-            textView11.setText("El valor de "+spinner2.getSelectedItem().toString()+" es de : 5000 ");
+            textView11.setText("El valor de "+spinner2.getSelectedItem().toString()+" es de : 7000 ");
         }
 
         if(spinner2.getSelectedItem().toString().equals("Revival"))
         {
-            textView11.setText("El valor de "+spinner2.getSelectedItem().toString()+" es de : 12000 ");
+            textView11.setText("El valor de "+spinner2.getSelectedItem().toString()+" es de : 22000 ");
         }
 
         if(spinner2.getSelectedItem().toString().equals("El Alquimista"))
         {
             textView11.setText("El valor de "+spinner2.getSelectedItem().toString()+" es de : 45000 ");
         }
+
+
+        if(spinner2.getSelectedItem().toString().equals("EL Poder"))
+        {
+            textView11.setText("El valor de "+spinner2.getSelectedItem().toString()+" es de : 88000 ");
+        }
+
+        if(spinner2.getSelectedItem().toString().equals("Despertar"))
+        {
+            textView11.setText("El valor de "+spinner2.getSelectedItem().toString()+" es de : 156000 ");
+        }
+
+
 
 
     }
